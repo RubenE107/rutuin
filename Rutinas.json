@@ -1,0 +1,822 @@
+[
+  {
+    "nombre": "Rutina Push Pull Legs (PPL)",
+    "descripcion": "Divide el entrenamiento en empujes, jalones y piernas, ideal para fuerza e hipertrofia.",
+    "recomendado": "Ideal si entrenas 5-6 días por semana y quieres progresar en fuerza e hipertrofia.",
+    "no_recomendado": "No es ideal si solo puedes entrenar 2-3 veces por semana.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Push (Pecho, Hombros, Tríceps)",
+        "detalle": {
+          "grupo": "Push",
+          "ejercicios": [
+            "Press banca",
+            "Press inclinado",
+            "Aperturas",
+            "Press militar",
+            "Elevaciones laterales",
+            "Pájaros",
+            "Fondos"
+          ]
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Pull (Espalda, Bíceps)",
+        "detalle": {
+          "grupo": "Pull",
+          "ejercicios": [
+            "Remo con barra",
+            "Jalón al pecho",
+            "Peso muerto",
+            "Curl bíceps",
+            "Jalón tríceps",
+            "Martillo"
+          ]
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Piernas",
+        "detalle": {
+          "grupo": "Piernas",
+          "ejercicios": [
+            "Sentadilla",
+            "Prensa",
+            "Extensión de cuádriceps"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Repetir o descanso",
+        "detalle": {
+          "grupo": "Repetir o descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Repetir la secuencia anterior o ajustar según nivel de energía. Ideal para refuerzo o enfoque específico."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina Full Body",
+    "descripcion": "Trabaja todo el cuerpo cada día. Perfecta para principiantes o quienes entrenan 3 días a la semana.",
+    "recomendado": "Perfecta si tienes poco tiempo o estás comenzando en el gimnasio.",
+    "no_recomendado": "Puede quedar corta si eres avanzado y necesitas más volumen por músculo.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Cuerpo completo",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Cuerpo completo",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Cuerpo completo",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina Torso-Pierna",
+    "descripcion": "Alterna entre parte superior e inferior del cuerpo, equilibrando volumen y recuperación.",
+    "recomendado": "Buena para progreso intermedio, equilibrando fatiga entre tren superior e inferior.",
+    "no_recomendado": "No recomendada si quieres trabajar más detalles estéticos como brazos o glúteos por separado.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Torso",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Pierna",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Torso",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Pierna",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 6",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 7",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina de Empuje (Push)",
+    "descripcion": "Enfocada en músculos de empuje: pecho, hombros y tríceps. Ideal para aumentar fuerza en press.",
+    "recomendado": "Útil para especializarse en fuerza de pecho, hombro y tríceps.",
+    "no_recomendado": "Puede sobrecargar el deltoide anterior si no se programa bien.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Push",
+        "detalle": {
+          "grupo": "Push",
+          "ejercicios": [
+            "Press banca",
+            "Press inclinado",
+            "Aperturas",
+            "Press militar",
+            "Elevaciones laterales",
+            "Pájaros",
+            "Fondos"
+          ]
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Push",
+        "detalle": {
+          "grupo": "Push",
+          "ejercicios": [
+            "Press banca",
+            "Press inclinado",
+            "Aperturas",
+            "Press militar",
+            "Elevaciones laterales",
+            "Pájaros",
+            "Fondos"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Push",
+        "detalle": {
+          "grupo": "Push",
+          "ejercicios": [
+            "Press banca",
+            "Press inclinado",
+            "Aperturas",
+            "Press militar",
+            "Elevaciones laterales",
+            "Pájaros",
+            "Fondos"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina de Tirón (Pull)",
+    "descripcion": "Trabaja músculos de jalón como espalda y bíceps. Buena para mejorar tracción y dominadas.",
+    "recomendado": "Mejora fuerza de tracción, dominadas y grosor de espalda.",
+    "no_recomendado": "No recomendada si tienes problemas de agarre o lesiones lumbares.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Pull",
+        "detalle": {
+          "grupo": "Pull",
+          "ejercicios": [
+            "Remo con barra",
+            "Jalón al pecho",
+            "Peso muerto",
+            "Curl bíceps",
+            "Jalón tríceps",
+            "Martillo"
+          ]
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Pull",
+        "detalle": {
+          "grupo": "Pull",
+          "ejercicios": [
+            "Remo con barra",
+            "Jalón al pecho",
+            "Peso muerto",
+            "Curl bíceps",
+            "Jalón tríceps",
+            "Martillo"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Pull",
+        "detalle": {
+          "grupo": "Pull",
+          "ejercicios": [
+            "Remo con barra",
+            "Jalón al pecho",
+            "Peso muerto",
+            "Curl bíceps",
+            "Jalón tríceps",
+            "Martillo"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina Weider",
+    "descripcion": "Clásica rutina de fisicoculturismo con un grupo muscular por día. Alto volumen por zona.",
+    "recomendado": "Ideal para culturismo clásico, con enfoque en detalle muscular.",
+    "no_recomendado": "No recomendada para personas con poco tiempo o que faltan seguido al gimnasio.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Pecho",
+        "detalle": {
+          "grupo": "Pecho",
+          "ejercicios": [
+            "Press banca",
+            "Press inclinado",
+            "Aperturas"
+          ]
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Espalda",
+        "detalle": {
+          "grupo": "Espalda",
+          "ejercicios": [
+            "Remo con barra",
+            "Jalón al pecho",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Piernas",
+        "detalle": {
+          "grupo": "Piernas",
+          "ejercicios": [
+            "Sentadilla",
+            "Prensa",
+            "Extensión de cuádriceps"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Hombros",
+        "detalle": {
+          "grupo": "Hombros",
+          "ejercicios": [
+            "Press militar",
+            "Elevaciones laterales",
+            "Pájaros"
+          ]
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Brazos",
+        "detalle": {
+          "grupo": "Brazos",
+          "ejercicios": [
+            "Curl bíceps",
+            "Jalón tríceps",
+            "Martillo"
+          ]
+        }
+      },
+      {
+        "dia": "Día 6",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 7",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina de Fuerza 5x5",
+    "descripcion": "Basada en 3 ejercicios grandes. Ideal para fuerza pura en principiantes e intermedios.",
+    "recomendado": "Excelente para ganar fuerza rápidamente en ejercicios grandes.",
+    "no_recomendado": "No recomendada para lesiones articulares o quienes prefieren más variedad.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Full body (5x5)",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Full body (5x5)",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Full body (5x5)",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina de Glúteos y Piernas",
+    "descripcion": "Focalizada en el desarrollo de la parte inferior, especialmente glúteos y femorales.",
+    "recomendado": "Buena si tu objetivo es la estética y fuerza en tren inferior.",
+    "no_recomendado": "No es ideal si buscas desarrollo completo del cuerpo.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Glúteos y piernas",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Parte superior ligera",
+        "detalle": {
+          "grupo": "Parte superior",
+          "ejercicios": [
+            "Press militar",
+            "Elevaciones laterales",
+            "Curl bíceps",
+            "Rompecráneos"
+          ],
+          "recomendacion": "Usar este día para mantener tono general. Ejercicios sugeridos: Press militar, Elevaciones laterales, Curl bíceps, Rompecráneos."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Glúteos y piernas",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Glúteos y piernas",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina de Volumen Avanzado",
+    "descripcion": "Alta frecuencia y volumen. Requiere experiencia y buena recuperación.",
+    "recomendado": "Ideal para personas avanzadas con experiencia, buscando máximo crecimiento.",
+    "no_recomendado": "No recomendada para principiantes o quienes no duermen bien o comen mal.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Pecho-Tríceps",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Espalda-Bíceps",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Piernas",
+        "detalle": {
+          "grupo": "Piernas",
+          "ejercicios": [
+            "Sentadilla",
+            "Prensa",
+            "Extensión de cuádriceps"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Hombros-Brazos",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Full Body",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 6",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 7",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      }
+    ]
+  },
+  {
+    "nombre": "Rutina Express (30 min)",
+    "descripcion": "Diseñada para personas con poco tiempo. Entrenamientos intensos y cortos.",
+    "recomendado": "Perfecta si tienes poco tiempo pero quieres mantener condición física.",
+    "no_recomendado": "No recomendada si estás en etapa de volumen serio o quieres máximo rendimiento.",
+    "dias": [
+      {
+        "dia": "Día 1",
+        "actividad": "Circuito full body",
+        "detalle": {
+          "grupo": "General",
+          "ejercicios": [
+            "Estiramientos dinámicos",
+            "Trabajo técnico",
+            "Activación general"
+          ],
+          "recomendacion": "Día no específico. Puede usarse para movilidad, técnica o corregir debilidades personales."
+        }
+      },
+      {
+        "dia": "Día 2",
+        "actividad": "Cardio HIIT",
+        "detalle": {
+          "grupo": "Cardio",
+          "ejercicios": [
+            "HIIT",
+            "Cinta",
+            "Elíptica"
+          ]
+        }
+      },
+      {
+        "dia": "Día 3",
+        "actividad": "Full body",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 4",
+        "actividad": "Cardio y abdomen",
+        "detalle": {
+          "grupo": "Cardio",
+          "ejercicios": [
+            "HIIT",
+            "Cinta",
+            "Elíptica"
+          ]
+        }
+      },
+      {
+        "dia": "Día 5",
+        "actividad": "Full body",
+        "detalle": {
+          "grupo": "Full Body",
+          "ejercicios": [
+            "Sentadilla",
+            "Press banca",
+            "Peso muerto"
+          ]
+        }
+      },
+      {
+        "dia": "Día 6",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      },
+      {
+        "dia": "Día 7",
+        "actividad": "Descanso",
+        "detalle": {
+          "grupo": "Descanso",
+          "ejercicios": [
+            "Ejercicio genérico 1",
+            "Ejercicio genérico 2"
+          ],
+          "recomendacion": "Día destinado al descanso. Se recomienda dormir bien, estiramientos suaves o caminatas para recuperación activa."
+        }
+      }
+    ]
+  }
+]

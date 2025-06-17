@@ -1,0 +1,584 @@
+[
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Primarios",
+    "nombre": "Press de banca plano con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Primarios",
+    "nombre": "Press inclinado con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Primarios",
+    "nombre": "Press inclinado con mancuernas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Primarios",
+    "nombre": "Press declinado con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Primarios",
+    "nombre": "Press declinado con mancuernas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Secundarios",
+    "nombre": "Aperturas con mancuernas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Secundarios",
+    "nombre": "Pec Deck",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Secundarios",
+    "nombre": "Crossover en polea",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Complementarios",
+    "nombre": "Flexiones",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Pecho",
+    "nivel": "Complementarios",
+    "nombre": "Pullover con mancuerna",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Primarios",
+    "nombre": "Peso muerto",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Primarios",
+    "nombre": "Remo con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Primarios",
+    "nombre": "Remo con mancuerna",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Primarios",
+    "nombre": "Jalón al pecho",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Secundarios",
+    "nombre": "Remo en polea baja",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Secundarios",
+    "nombre": "Pull-over en polea alta",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Complementarios",
+    "nombre": "Dominadas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Espalda",
+    "nivel": "Complementarios",
+    "nombre": "Face pulls",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Primarios",
+    "nombre": "Sentadilla",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Primarios",
+    "nombre": "Prensa de piernas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Primarios",
+    "nombre": "Peso muerto rumano",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Secundarios",
+    "nombre": "Extensiones de cuádriceps",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Secundarios",
+    "nombre": "Curl femoral tumbado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Secundarios",
+    "nombre": "Curl femoral sentado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Secundarios",
+    "nombre": "Elevaciones de talones",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Complementarios",
+    "nombre": "Zancadas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Complementarios",
+    "nombre": "Hip thrust",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Piernas",
+    "nivel": "Complementarios",
+    "nombre": "Step-ups",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Primarios",
+    "nombre": "Press militar con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Primarios",
+    "nombre": "Press Arnold",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Secundarios",
+    "nombre": "Elevaciones laterales",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Secundarios",
+    "nombre": "Elevaciones frontales",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Secundarios",
+    "nombre": "Pájaros",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Complementarios",
+    "nombre": "Face pulls",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Hombros",
+    "nivel": "Complementarios",
+    "nombre": "Remo al mentón",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Primarios",
+    "nombre": "Curl con barra recta",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Primarios",
+    "nombre": "Curl con barra Z",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Primarios",
+    "nombre": "Curl con mancuernas alternado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Secundarios",
+    "nombre": "Curl concentrado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Secundarios",
+    "nombre": "Curl tipo martillo",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Secundarios",
+    "nombre": "Curl en banco Scott",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Bíceps",
+    "nivel": "Complementarios",
+    "nombre": "Dominadas supinas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Primarios",
+    "nombre": "Fondos en paralelas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Primarios",
+    "nombre": "Press cerrado en banca",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Secundarios",
+    "nombre": "Rompecráneos con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Secundarios",
+    "nombre": "Jalón en polea con cuerda",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Secundarios",
+    "nombre": "Jalón en polea con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Secundarios",
+    "nombre": "Patada de tríceps",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Tríceps",
+    "nivel": "Complementarios",
+    "nombre": "Extensión con mancuerna a una mano",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Primarios",
+    "nombre": "Hip thrust",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Primarios",
+    "nombre": "Sentadilla profunda",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Secundarios",
+    "nombre": "Peso muerto rumano",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Secundarios",
+    "nombre": "Zancadas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Complementarios",
+    "nombre": "Patada en polea",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Glúteos",
+    "nivel": "Complementarios",
+    "nombre": "Puente de glúteos",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Antebrazos",
+    "nivel": "Primarios",
+    "nombre": "Curl invertido con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Antebrazos",
+    "nivel": "Secundarios",
+    "nombre": "Curl de muñeca en flexión",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Antebrazos",
+    "nivel": "Secundarios",
+    "nombre": "Curl de muñeca en extensión",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Antebrazos",
+    "nivel": "Complementarios",
+    "nombre": "Toalla en barra para dominadas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Antebrazos",
+    "nivel": "Complementarios",
+    "nombre": "Farmer's walk",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Primarios",
+    "nombre": "Encogimientos con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Primarios",
+    "nombre": "Encogimientos con mancuernas",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Primarios",
+    "nombre": "Remo al mentón",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Secundarios",
+    "nombre": "Peso muerto",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Secundarios",
+    "nombre": "Remo con barra",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Trapecio",
+    "nivel": "Complementarios",
+    "nombre": "Face pulls",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Primarios",
+    "nombre": "Crunch en banco declinado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Primarios",
+    "nombre": "Elevación de piernas colgado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Secundarios",
+    "nombre": "Crunch inverso",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Secundarios",
+    "nombre": "Plancha frontal",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Complementarios",
+    "nombre": "Rueda abdominal",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Abdominales",
+    "nivel": "Complementarios",
+    "nombre": "Plancha lateral",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Oblicuos",
+    "nivel": "Primarios",
+    "nombre": "Crunch lateral en máquina",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Oblicuos",
+    "nivel": "Primarios",
+    "nombre": "Giros rusos con peso",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Oblicuos",
+    "nivel": "Secundarios",
+    "nombre": "Elevación de piernas con torsión",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Oblicuos",
+    "nivel": "Complementarios",
+    "nombre": "Plancha con rotación",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Lumbar",
+    "nivel": "Primarios",
+    "nombre": "Peso muerto convencional",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Lumbar",
+    "nivel": "Primarios",
+    "nombre": "Buenos días",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Lumbar",
+    "nivel": "Secundarios",
+    "nombre": "Hiperextensiones",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Lumbar",
+    "nivel": "Complementarios",
+    "nombre": "Superman en colchoneta",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Cuello",
+    "nivel": "Primarios",
+    "nombre": "Elevación de cabeza con peso tumbado",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Cuello",
+    "nivel": "Secundarios",
+    "nombre": "Flexión lateral con banda",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Cuello",
+    "nivel": "Secundarios",
+    "nombre": "Flexión posterior con disco",
+    "tipo": "Fuerza"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Saltar la cuerda",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Burpees",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Mountain climbers",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Jumping jacks",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Cinta de correr",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Bicicleta estática",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Cardio",
+    "nivel": "Primarios",
+    "nombre": "Remo ergómetro",
+    "tipo": "Cardio"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de cuádriceps de pie",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de isquiotibiales sentado",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de pectorales en puerta",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de espalda de gato y camello",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de glúteos acostado",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Rotación de tronco en el suelo",
+    "tipo": "Estiramiento"
+  },
+  {
+    "grupo_muscular": "Estiramiento",
+    "nivel": "Primarios",
+    "nombre": "Estiramiento de cuello lateral",
+    "tipo": "Estiramiento"
+  }
+]
