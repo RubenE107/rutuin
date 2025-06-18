@@ -7,34 +7,27 @@ class AuthRepositoryImpl implements IAuthRepository {
       'https://kk6q1sz1-3001.usw3.devtunnels.ms/usuarios'; // en emulador Android usa 10.0.2.2
 
   @override
-  Future<String?> login(String email, String password) async {
+  Future<bool> login(String email, String password) async {
     final url = Uri.parse('$baseUrl/login');
-    try {
-      final response = await http.post(
-        url,
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'email': email, 'contraseña': password}),
-      );
-      print(
-        'Enviando solicitud a: $url con datos: correo: $email, contraseña: $password',
-      );
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        final usuario = data['usuario'];
-        final id = usuario['id']; // ✅ aquí obtienes el ID
-        final nombre = usuario['nombre'];
-
-        print('✅ Login ID: $id');
-
-        // Puedes guardar el ID o pasarlo a HomeScreen
-        return id;
-      } else {
-        print('❌ Error: ${response.body}');
-        return null;
-      }
+    try{
+    final response = await http.post(
+      url,
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({'email': email, 'contraseña': password}),
+    );
+    print(
+      'Enviando solicitud a: $url con datos: correo: $email, contraseña: $password',
+    );
+    if (response.statusCode == 200) {
+      print('✅ Login exitoso: ${response.body}');
+      return true;
+    } else {
+      print('❌ Error: ${response.body}');
+      return false;
+    }
     } catch (e) {
       print('❌ Error al realizar la solicitud: $e');
-      return null;
+      return false;
     }
   }
 
@@ -88,6 +81,7 @@ class AuthRepositoryImpl implements IAuthRepository {
                 'fecha': DateTime.now().toIso8601String(),
               },
             ],
+
           },
           'notificaciones_dieta': false,
           'notificaciones_entrenamiento': false,
@@ -115,27 +109,5 @@ class AuthRepositoryImpl implements IAuthRepository {
       print('❌ Error: ${response.body}');
       return false;
     }
-
   }
-  @override
-Future<Map<String, dynamic>?> getUserData(String userId) async {
-  final url = Uri.parse('$baseUrl/$userId'); // ✅ sin los ":"
-  try {
-    print('📤 Enviando solicitud a: $url con ID de usuario: $userId');
-    final response = await http.get(url);
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      print('✅ Datos del usuario obtenidos correctamente');
-      return data;
-    } else {
-      print('❌ Error al obtener datos del usuario: ${response.statusCode} - ${response.body}');
-      return null;
-    }
-  } catch (e) {
-    print('❌ Error al realizar la solicitud: $e');
-    return null;
-  }
-}
-
 }

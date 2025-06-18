@@ -5,8 +5,11 @@ class LoginUseCase {
 
   LoginUseCase(this.repository);
 
-  Future<bool> execute(String email, String password) {
+  Future<String?> execute(String email, String password) {
     return repository.login(email, password);
+  }
+  Future<Map<String, dynamic>?> getUserData(String userId) {
+    return repository.getUserData(userId);
   }
   
 }

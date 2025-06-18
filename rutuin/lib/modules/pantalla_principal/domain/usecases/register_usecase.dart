@@ -5,8 +5,5 @@ class RegisterUseCase {
 
   RegisterUseCase(this.repository);
 
-  Future<bool> register(String email, String password, String name) {
-    return repository.register(email, password, name);
-  }
   
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/pages/home_screen.dart';
 import '../controllers/login_controller.dart';
+import 'package:rutuin/modules/auth/presentation/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   final emailCtrl = TextEditingController();
@@ -10,6 +13,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      
+
     return Scaffold(
       appBar: AppBar(title: const Text('Iniciar Sesión')),
       body: Padding(
@@ -35,20 +40,25 @@ class LoginPage extends StatelessWidget {
                 final email = emailCtrl.text.trim();
                 final password = passwordCtrl.text.trim();
 
-                final success = await controller.login(email, password);
+                final success = await controller.login(context,email, password);
 
                 if (success) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('¡Login exitoso!')),
                   );
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
                   // Aquí podrías navegar a otra pantalla
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Credenciales incorrectas')),
+                    const SnackBar(content: Text('Credenciales incorrectas  ')),
                   );
+                  //Navigator.pushNamed(context, '/');
                 }
+                
+
               },
               child: const Text("Entrar"),
+              
             ),
           ],
         ),

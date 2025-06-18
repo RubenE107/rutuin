@@ -1,5 +1,6 @@
 abstract class IAuthRepository {
-  Future<bool> login(String email, String password);
+  Future<String?> login(String email, String password);
   Future<bool> register(String email, String password, String name);
+  Future <Map<String, dynamic>?> getUserData(String userId);
   //Future<bool> logout();
 }

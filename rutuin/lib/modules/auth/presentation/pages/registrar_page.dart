@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rutuin/modules/auth/data/repositories/auth_repository_impl.dart';
 import 'package:rutuin/modules/auth/domain/usecases/register_usecase.dart';
-import '../controllers/login_controller.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -63,6 +62,10 @@ class RegisterPage extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text(msg),
                 ));
+                if (msg == "Registro exitoso") {
+                  Navigator.pushNamed(context, '/');
+                }
+
               },
             )
           ],
