@@ -1,4 +1,4 @@
-import '../repositories/i_auth_repository.dart';
+import '../repositories/i_home_repository.dart';
 
 class RegisterUseCase {
   final IAuthRepository repository;

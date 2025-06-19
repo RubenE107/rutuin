@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:rutuin/core/theme/config.dart';
 import '../../domain/repositories/i_auth_repository.dart';
 
+
 class AuthRepositoryImpl implements IAuthRepository {
-  final String baseUrl =
-      'https://kk6q1sz1-3001.usw3.devtunnels.ms/usuarios'; // en emulador Android usa 10.0.2.2
+  final String baseUrl =appConfig.appRepository +'usuarios'; // en emulador Android usa 10.0.2.2
 
   @override
   Future<String?> login(String email, String password) async {

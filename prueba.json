@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rubén Eduardo",
+      "email": "ruben@example.com"
+    },
+    {
+      "id": 2,
+      "name": "María Pérez",
+      "email": "maria@example.com"
+    }
+  ],
+  "exercises": [
+    { "id": 1, "name": "Sentadillas",    "muscleGroup": "Piernas" },
+    { "id": 2, "name": "Press de Pecho", "muscleGroup": "Pecho"    },
+    { "id": 3, "name": "Remo con Barra", "muscleGroup": "Espalda"  }
+  ],
+  "sessions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "date": "2025-06-17"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "date": "2025-06-18"
+    }
+  ],
+  "sets": [
+    { "id": 1, "sessionId": 1, "exerciseId": 1, "setNumber": 1, "reps": 12, "weight": 100.0 },
+    { "id": 2, "sessionId": 1, "exerciseId": 1, "setNumber": 2, "reps": 10, "weight": 110.0 },
+    { "id": 3, "sessionId": 1, "exerciseId": 2, "setNumber": 1, "reps":  8, "weight":  80.0 },
+    { "id": 4, "sessionId": 2, "exerciseId": 1, "setNumber": 1, "reps": 10, "weight": 105.0 },
+    { "id": 5, "sessionId": 2, "exerciseId": 3, "setNumber": 1, "reps": 10, "weight":  90.0 },
+    { "id": 6, "sessionId": 2, "exerciseId": 3, "setNumber": 2, "reps":  8, "weight":  95.0 }
+  ]
+}

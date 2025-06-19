@@ -12,9 +12,8 @@ class ProgresoScreen extends StatelessWidget {
       {'fecha': '2025-06-14', 'musculos': 'Piernas'},
     ];
 
-    return Scaffold(
-      appBar: AppBar(title: const Text('Progreso 🏋️')),
-      body: ListView(
+    
+      return ListView(
         padding: const EdgeInsets.all(16),
         children: [
           Text(
@@ -68,8 +67,20 @@ class ProgresoScreen extends StatelessWidget {
               );
             }).toList(),
           ),
+          const SizedBox(height: 20),
+          ElevatedButton.icon(
+            onPressed: () {
+              // Aquí podrías navegar a una página de historial detallado
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Historial detallado no implementado')),
+              );
+            },
+            icon: const Icon(Icons.history),
+            label: const Text('Ver historial completo'),
+          ),
         ],
-      ),
-    );
+      );
   }
 }
+      
+  

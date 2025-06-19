@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../../domain/repositories/i_auth_repository.dart';
+import '../../domain/repositories/i_home_repository.dart';
 
 class AuthRepositoryImpl implements IAuthRepository {
   final String baseUrl =
