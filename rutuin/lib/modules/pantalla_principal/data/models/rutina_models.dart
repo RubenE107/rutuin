@@ -1,6 +1,6 @@
 class RutinaModel {
-  final String nombre;
-  final String descripcion;
+  late final String nombre;
+  late final String descripcion;
   final String recomendado;
   final String noRecomendado;
   final List<DiaRutina> dias;
@@ -69,9 +69,9 @@ class DetalleRutina {
 }
 
 class EjercicioRutina {
-  final String nombre;
-  final int series;
-  final List<int> repeticiones;
+  late final String nombre;
+  late final int series;
+  late final List<int> repeticiones;
 
   EjercicioRutina({
     required this.nombre,

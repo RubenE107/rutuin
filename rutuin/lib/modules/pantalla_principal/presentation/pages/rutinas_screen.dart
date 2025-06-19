@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rutuin/modules/pantalla_principal/data/models/rutina_models.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/pages/editarRutina_screen.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/widgets/card_detalle_dias_rutina.dart';
 
 class RutinasScreen extends StatelessWidget {
@@ -12,9 +13,8 @@ class RutinasScreen extends StatelessWidget {
       appBar: AppBar(title: const Text("Rutinas disponibles")),
       body: ListView.builder(
         itemCount: rutinas.length,
-        
-        itemBuilder: (context, index) {
 
+        itemBuilder: (context, index) {
           final rutina = rutinas[index];
           return Card(
             margin: const EdgeInsets.all(12),
@@ -26,10 +26,16 @@ class RutinasScreen extends StatelessWidget {
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   subtitle: Text(rutina.descripcion),
-                  children: rutina.dias.map((dia) => DiaRutinaCard(dia: dia)).toList(),
+                  children:
+                      rutina.dias
+                          .map((dia) => DiaRutinaCard(dia: dia))
+                          .toList(),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -37,9 +43,12 @@ class RutinasScreen extends StatelessWidget {
                         icon: const Icon(Icons.check_circle_outline),
                         label: const Text("Seleccionar"),
                         onPressed: () {
-                          
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text("Rutina '${rutina.nombre}' seleccionada")),
+                            SnackBar(
+                              content: Text(
+                                "Rutina '${rutina.nombre}' seleccionada",
+                              ),
+                            ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
@@ -52,9 +61,19 @@ class RutinasScreen extends StatelessWidget {
                         label: const Text("Editar"),
                         onPressed: () {
                           // Acción: Ir a pantalla de edición
-
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder:
+                                  (_) => EditarRutinaScreen(rutina: rutina),
+                            ),
+                          );
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text("Función de edición no implementada")),
+                            SnackBar(
+                              content: Text(
+                                "Función de edición no implementada",
+                              ),
+                            ),
                           );
                         },
                       ),
