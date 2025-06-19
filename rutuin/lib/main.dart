@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rutuin/core/theme/app_theme.dart';
 import 'package:rutuin/modules/auth/presentation/pages/registrar_page.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/providers/rutina_provider.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/providers/usuarioRutina_providers.dart';
 import 'modules/auth/presentation/pages/login_page.dart'; //
 
 import 'homePage.dart'; // Importa la página de inicio
@@ -15,6 +17,9 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => UserRutinProvider()), // Asegúrate de importar el provider correcto
+        ChangeNotifierProvider(create: (_)=> RutinaProvider()),
+        ChangeNotifierProvider(create: (_) => RutinaDiaProvider()),
       ],
       child: MyApp(),
     ),
@@ -28,12 +33,12 @@ class MyApp extends StatelessWidget {
       title: 'App Coach',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      theme:AppTheme.theme,
+      theme:AppTheme.minimalLight,
       routes: {
         '/': (context) => HomePage(),       // luego la creamos
         '/login': (context) => LoginPage(), // ya la tienes lista
         '/register': (context) =>RegisterPage(),
-        '/home':(context)=>HomeScreen(),// Aquí puedes crear una página de registro
+        '/home':(context)=>HomeScreen(),// Aquí puedes crear una página de registro // Aquí puedes crear una página para ver rutinas
       },
     );
   }

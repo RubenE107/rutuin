@@ -1,11 +1,11 @@
-class Rutina {
+class RutinaModel {
   final String nombre;
   final String descripcion;
   final String recomendado;
   final String noRecomendado;
   final List<DiaRutina> dias;
 
-  Rutina({
+  RutinaModel({
     required this.nombre,
     required this.descripcion,
     required this.recomendado,
@@ -13,8 +13,8 @@ class Rutina {
     required this.dias,
   });
 
-  factory Rutina.fromJson(Map<String, dynamic> json) {
-    return Rutina(
+  factory RutinaModel.fromJson(Map<String, dynamic> json) {
+    return RutinaModel(
       nombre: json['nombre'],
       descripcion: json['descripcion'],
       recomendado: json['recomendado'],

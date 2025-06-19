@@ -19,7 +19,10 @@ mongoose.connect('mongodb://localhost:27017/AppFit', {
 // Rutas
 const usuariosRouter = require('./routes/usuarios');
 app.use('/usuarios', usuariosRouter);
-
+const rutinasRouter = require('./routes/rutinas');
+app.use('/rutinas', rutinasRouter);
+const usuarioRutinaRouter = require('./routes/usuarioRutina');
+app.use('/usuarioRutina', usuarioRutinaRouter);
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Servidor escuchando en http://localhost:${PORT}`);

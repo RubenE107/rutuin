@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const Rutina = require('../models/Rutina');
+const Rutina = require('../models/UsuarioRutina');
+const UsuarioRutina = require('../models/UsuarioRutina');
 
-router.get('/obtenerRutinas', async (req, res) => {
+router.get('/usuariosRutinas', async (req, res) => {
   res.status(200).json(await Rutina.find());
 });
-//obtener una sola ruutina por ID
 router.get('/:id', async (req, res) => {
-  console.log('📥 GET /rutina/:id') ;
+  console.log('📥 GET /usuarioRutina/:id');
   const { id } = req.params;
+  usuario_id = id;
   try {
-    console.log(`📥 Obteniendo rutina con ID: ${id}`) ;
-    const rutina = await Rutina.findById(id);
+    console.log(`📥 Obteniendo rutina con ID de usuario: ${usuario_id}`);
+    const rutina = await UsuarioRutina.findOne({ usuario_id });
     console.log('📥 Rutina obtenida:', rutina);
     if (!rutina) {
       return res.status(404).json({ mensaje: 'Rutina no encontrada' });
@@ -22,6 +23,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json({ mensaje: 'Error al obtener rutina' });
   }
 });
+//obtener un
 
 
 module.exports = router;

@@ -26,14 +26,14 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
-          Center(
-            child: ElevatedButton(
-              child: Text("Entrar"),
-              onPressed: () {
-                Navigator.pushNamed(context, '/home');
-              },
-            ),
-          ),
+          // Center(
+          //   child: ElevatedButton(
+          //     child: Text("Entrar"),
+          //     onPressed: () {
+          //       Navigator.pushNamed(context, '/home');
+          //     },
+          //   ),
+          // ),
         ],
       ),
     );

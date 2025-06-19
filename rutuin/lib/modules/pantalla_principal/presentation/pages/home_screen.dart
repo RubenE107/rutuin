@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rutuin/modules/auth/presentation/providers/user_provider.dart';
+import 'package:rutuin/modules/pantalla_principal/data/models/rutina_models.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/controllers/entrenamiento_screen_controller.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/pages/entrenamiento_screen.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/pages/progreso_screen.dart';
-
+import 'package:rutuin/modules/pantalla_principal/presentation/pages/rutinas_screen.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/providers/rutina_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,26 +16,60 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final controller = EntrenamientoScreenController();
   int _selectedIndex = 0;
-
-  final List<Widget> _screens = [
-    EntrenamientoScreen(),
-    ProgresoScreen(),
-    //ietaScreen(),
-  ];
 
   @override
   Widget build(BuildContext context) {
+    // Asegúrate de que id no sea nulo
+    final List<Widget> _screens = [
+      EntrenamientoScreen(),
+      ProgresoScreen(),
+      //ietaScreen(),
+    ];
     final user = context.watch<UserProvider>().usuario;
+    //final rutina_actual =  await controller.obtenerRutinaActual(user!.id);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Hola, ${user?.nombre ?? ''} 👋'),
+      appBar: AppBar(title: Text('Hola, ${user?.nombre ?? 'Usuario'} 👋')),
+      body: IndexedStack(index: _selectedIndex, children: _screens),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          final rutinas = await controller.obtenerRutina();
+          final nombre =
+              context.read<RutinaProvider>().usuario?.nombre ?? 'No hay rutina seleccionada';
+
+          // Mostrar diálogo
+          showDialog(
+            context: context,
+            builder:
+                (context) => AlertDialog(
+                  title: const Text('¡Aviso!'),
+                  content: Text("Actualmente la rutina activa es: $nombre"),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder:
+                                (context) => RutinasScreen(rutinas: rutinas),
+                          ),
+                        );
+                      },
+                      child: const Text('Continuar'),
+                    ),
+                  ],
+                ),
+          );
+
+          // Cerrar automáticamente el diálogo después de 2 segundos
+          
+          // Ir a RutinasScreen
+        },
+        child: const Icon(Icons.fitness_center),
       ),
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: _screens,
-      ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (value) => setState(() => _selectedIndex = value),
