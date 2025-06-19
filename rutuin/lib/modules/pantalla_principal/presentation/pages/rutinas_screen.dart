@@ -43,6 +43,10 @@ class RutinasScreen extends StatelessWidget {
                         icon: const Icon(Icons.check_circle_outline),
                         label: const Text("Seleccionar"),
                         onPressed: () {
+                          
+
+
+
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
@@ -71,7 +75,7 @@ class RutinasScreen extends StatelessWidget {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                "Función de edición no implementada",
+                                "Editando rutina '${rutina.nombre}'",
                               ),
                             ),
                           );
