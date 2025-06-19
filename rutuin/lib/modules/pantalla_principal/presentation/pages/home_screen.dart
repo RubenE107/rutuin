@@ -37,7 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () async {
           final rutinas = await controller.obtenerRutina();
           final nombre =
-              context.read<RutinaProvider>().usuario?.nombre ?? 'No hay rutina seleccionada';
+              context.read<RutinaProvider>().usuario?.nombre ??
+              'No hay rutina seleccionada';
 
           // Mostrar diálogo
           showDialog(
@@ -48,6 +49,24 @@ class _HomeScreenState extends State<HomeScreen> {
                   content: Text("Actualmente la rutina activa es: $nombre"),
                   actions: [
                     TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.resolveWith<
+                          Color?
+                        >((Set<WidgetState> states) {
+                          if (states.contains(WidgetState.hovered)) {
+                            return Colors
+                                .blue
+                                .shade100; // Color cuando el mouse está encima
+                          }
+                          return Colors.white; // Color normal
+                        }),
+                        // Color del texto
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -59,12 +78,37 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       child: const Text('Continuar'),
                     ),
+
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.resolveWith<
+                          Color?
+                        >((Set<WidgetState> states) {
+                          if (states.contains(WidgetState.hovered)) {
+                            return Colors
+                                .blue
+                                .shade100; // Color cuando el mouse está encima
+                          }
+                          return Colors.white; // Color normal
+                        }),
+                        // Color del texto
+                        shape: WidgetStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('Cancelar'),
+                    ),
                   ],
                 ),
           );
 
           // Cerrar automáticamente el diálogo después de 2 segundos
-          
+
           // Ir a RutinasScreen
         },
         child: const Icon(Icons.fitness_center),
