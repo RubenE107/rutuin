@@ -7,27 +7,33 @@ import 'package:rutuin/modules/pantalla_principal/data/models/usuarioRutina_mode
 import 'package:rutuin/modules/pantalla_principal/domain/repositories/i_home_repository.dart';
 
 class HomeRepositoryImpl implements IHomeRepository {
-  final String baseUrlRutina = appConfig.appRepository+'rutinas'; // Ruta del archivo JSON donde se guardará la rutina
-  final String baseUrlUsuarioRutina = appConfig.appRepository+'usuarioRutina'; // Ruta del archivo JSON donde se guardará la rutina
+  final String baseUrlRutina =
+      appConfig.appRepository +
+      'rutinas'; // Ruta del archivo JSON donde se guardará la rutina
+  final String baseUrlUsuarioRutina =
+      appConfig.appRepository +
+      'usuarioRutina'; // Ruta del archivo JSON donde se guardará la rutina
   @override
   Future<List<RutinaModel>> getRutinas() async {
     final url = Uri.parse('$baseUrlRutina/obtenerRutinas');
-    try{
-      final response= await http.get(url);
+    try {
+      final response = await http.get(url);
       if (response.statusCode == 200) {
         final List<dynamic> data = jsonDecode(response.body);
-        final List<RutinaModel> rutinas = data.map((item) => RutinaModel.fromJson(item)).toList();
+        final List<RutinaModel> rutinas =
+            data.map((item) => RutinaModel.fromJson(item)).toList();
         //print('✅ Rutinas obtenidas correctamente: ${rutinas.first.nombre}');
         return rutinas;
       } else {
         print('❌ Error al obtener la rutina: ${response.statusCode}');
-        return [];  
-    }
-  }catch (e) {
+        return [];
+      }
+    } catch (e) {
       print('❌ Error al realizar la solicitud: $e');
       return [];
     }
   }
+
   @override
   Future<RutinasUsuarioModel?> getRutinaActual(String id) async {
     final url = Uri.parse('$baseUrlUsuarioRutina/$id');
@@ -51,8 +57,9 @@ class HomeRepositoryImpl implements IHomeRepository {
       return null;
     }
   }
+
   //obtener 1 rutina por id
- @override
+  @override
   Future<RutinaModel?> getRutinaById(String id) async {
     final url = Uri.parse('$baseUrlRutina/$id');
     try {
@@ -69,5 +76,33 @@ class HomeRepositoryImpl implements IHomeRepository {
       return null;
     }
   }
-  
+
+  @override
+  Future<RutinasUsuarioModel?> selecionarNuevaRutina(
+    String idUsuario,
+    List<RutinaInfo> listaRutinas,
+  ) async {
+    final url = Uri.parse('$baseUrlUsuarioRutina/$idUsuario');
+    try {
+      final response = await http.put(
+        url, // asegúrate que la ruta sea /usuarioRutina/:id
+        headers: {'Content-Type': 'application/json'},
+        body: jsonEncode({
+          'usuario_id': idUsuario,
+          'rutinas_ids': listaRutinas.map((e) => e.toJson()).toList(),
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = jsonDecode(response.body);
+        return RutinasUsuarioModel.fromJson(data);
+      } else {
+        print('❌ Error al seleccionar nueva rutina: ${response.statusCode}');
+        return null;
+      }
+    } catch (e) {
+      print('❌ Error al realizar la solicitud: $e');
+      return null;
+    }
+  }
 }

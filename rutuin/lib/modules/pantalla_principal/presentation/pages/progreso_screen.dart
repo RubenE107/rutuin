@@ -68,16 +68,16 @@ class ProgresoScreen extends StatelessWidget {
             }).toList(),
           ),
           const SizedBox(height: 20),
-          ElevatedButton.icon(
-            onPressed: () {
-              // Aquí podrías navegar a una página de historial detallado
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Historial detallado no implementado')),
-              );
-            },
-            icon: const Icon(Icons.history),
-            label: const Text('Ver historial completo'),
-          ),
+          // ElevatedButton.icon(
+          //   onPressed: () {
+          //     // Aquí podrías navegar a una página de historial detallado
+          //     ScaffoldMessenger.of(context).showSnackBar(
+          //       const SnackBar(content: Text('Historial detallado no implementado')),
+          //     );
+          //   },
+          //   icon: const Icon(Icons.history),
+          //   label: const Text('Ver historial completo'),
+          // ),
         ],
       );
   }

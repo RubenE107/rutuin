@@ -1,4 +1,5 @@
 class RutinaModel {
+  final String id;
   late final String nombre;
   late final String descripcion;
   final String recomendado;
@@ -6,6 +7,7 @@ class RutinaModel {
   final List<DiaRutina> dias;
 
   RutinaModel({
+    required this.id,
     required this.nombre,
     required this.descripcion,
     required this.recomendado,
@@ -15,6 +17,7 @@ class RutinaModel {
 
   factory RutinaModel.fromJson(Map<String, dynamic> json) {
     return RutinaModel(
+      id: json['_id'] ?? '',
       nombre: json['nombre'],
       descripcion: json['descripcion'],
       recomendado: json['recomendado'],

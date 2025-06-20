@@ -6,6 +6,7 @@ abstract class IHomeRepository {
   Future<List<RutinaModel>> getRutinas();
   Future<RutinasUsuarioModel?> getRutinaActual(String id);
   Future<RutinaModel?> getRutinaById(String id);
+  Future<RutinasUsuarioModel?> selecionarNuevaRutina(String idUsuario, List<RutinaInfo> listaRutinas);
   // Future<Map<String, dynamic>?> getRutinaById(String id);
   // Future<bool> addRutina(Map<String, dynamic> rutina);
   // Future<bool> updateRutina(String id, Map<String, dynamic> rutina);

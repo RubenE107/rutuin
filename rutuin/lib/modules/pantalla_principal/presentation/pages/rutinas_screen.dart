@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rutuin/modules/auth/presentation/providers/user_provider.dart';
 import 'package:rutuin/modules/pantalla_principal/data/models/rutina_models.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/controllers/entrenamiento_screen_controller.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/pages/editarRutina_screen.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/widgets/card_detalle_dias_rutina.dart';
 
+
 class RutinasScreen extends StatelessWidget {
   final List<RutinaModel> rutinas;
-  const RutinasScreen({super.key, required this.rutinas});
-
+  EntrenamientoScreenController controller =EntrenamientoScreenController();
+  RutinasScreen({super.key, required this.rutinas});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +48,10 @@ class RutinasScreen extends StatelessWidget {
                         icon: const Icon(Icons.check_circle_outline),
                         label: const Text("Seleccionar"),
                         onPressed: () {
+                          String idusuario = context.read<UserProvider>().usuario!.id;
+                          String idrutina = rutina.id;
                           
+                          controller.selecionarNuevaRutina(context,idusuario, idrutina);
 
 
 
