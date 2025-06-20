@@ -24,7 +24,7 @@ class EntrenamientoScreen extends StatelessWidget {
       final rutina = context.read<UserRutinProvider>().tieneRutina;
       if (rutina == true) {
         msj = '¡Listo para entrenar! 💪';
-        final rutinaUsuario = context.read<RutinaProvider>().usuario;
+        final rutinaUsuario = context.watch<RutinaProvider>().usuario;
         if (rutinaUsuario == null) {
           // Si aún no hay rutina cargada, muestra un loader o return
           return const Center(child: CircularProgressIndicator());
