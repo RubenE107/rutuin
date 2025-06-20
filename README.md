@@ -5,38 +5,108 @@ Rutuin es una app fullstack modular para crear, gestionar y monitorear rutinas d
 ##ES NESESARIO UN LINK CON HTTPS
 ---
 
-## 📦 Estructura del proyecto y explicación
+## 📁 Estructura del directorio `lib/`
 
-```
-root/
+lib/
 │
-├── appServer/                # Backend Node.js/Express
-│   ├── models/               # Modelos de datos (Mascota, Rutina, Usuario, etc.)
-│   ├── routes/               # Endpoints RESTful de cada entidad
-│   ├── server.js             # Punto de arranque del backend y conexión con la base de datos
-│   └── package.json
+├── core/
+│ └── theme/
+│ ├── app_theme.dart
+│ └── config.dart
 │
-├── rutuin/                   # Frontend Flutter
-│   ├── lib/
-│   │   ├── core/             # Temas y configuración global de la app
-│   │   ├── modules/
-│   │   │   ├── auth/         # Todo lo relacionado a autenticación (login, registro)
-│   │   │   └── pantalla_principal/ # Rutinas, progreso, widgets, lógica principal
-│   │   ├── homePage.dart     # Pantalla principal luego de login
-│   │   └── main.dart         # Arranque de la app
-│   └── ios/                  # Soporte multiplataforma (Android/iOS)
+├── modules/
+│ ├── auth/
+│ │ ├── data/
+│ │ │ ├── models/
+│ │ │ │ └── usuario_models.dart
+│ │ │ └── repositories/
+│ │ │ └── auth_repository_impl.dart
+│ │ ├── domain/
+│ │ │ ├── entities/
+│ │ │ │ └── usuario.dart
+│ │ │ └── repositories/
+│ │ │ └── i_auth_repository.dart
+│ │ │ └── usecases/
+│ │ │ ├── login_usecase.dart
+│ │ │ └── register_usecase.dart
+│ │ └── presentation/
+│ │ ├── controllers/
+│ │ │ ├── login_controller.dart
+│ │ │ └── register_controller.dart
+│ │ ├── pages/
+│ │ │ ├── login_page.dart
+│ │ │ └── registrar_page.dart
+│ │ └── providers/
+│ │ ├── user_provider.dart
+│ │ └── auth_module.dart
+│ │
+│ └── pantalla_principal/
+│ ├── data/
+│ │ ├── models/
+│ │ │ ├── rutina_models.dart
+│ │ │ └── usuarioRutina_models.dart
+│ │ └── repositories/
+│ │ └── home_repository_impl.dart
+│ ├── domain/
+│ │ ├── entities/
+│ │ │ ├── ejercicio.dart
+│ │ │ ├── rutina.dart
+│ │ │ └── usuariorutinas.dart
+│ │ └── repositories/
+│ │ └── i_home_repository.dart
+│ │ └── usecases/
+│ │ └── obtener_rutina_usecase.dart
+│ └── presentation/
+│ ├── controllers/
+│ │ └── entrenamiento_screen_controller.dart
+│ ├── pages/
+│ │ ├── dieta_screen.dart
+│ │ ├── editarRutina_screen.dart
+│ │ ├── entrenamiento_screen.dart
+│ │ ├── home_screen.dart
+│ │ ├── progreso_screen.dart
+│ │ └── rutinas_screen.dart
+│ ├── providers/
+│ │ ├── ejercicio_provider.dart
+│ │ ├── rutina_provider.dart
+│ │ └── usuarioRutina_providers.dart
+│ └── widgets/
+│ ├── card_detalle_dias_rutina.dart
+│ ├── tarjeta_editable_ejercicio.dart
+│ └── tarjeta_ejercicios.dart
 │
-├── Ejercicios.json           # Datos de ejemplo de rutinas y ejercicios (pueden usarse para pruebas)
-├── Rutinas.json
-├── screenshots/              # Capturas de pantalla (usadas abajo)
-└── README.md
-```
+├── homePage.dart
+└── main.dart
 
-- **models/**: Define la estructura y validación de los datos en MongoDB.
-- **routes/**: Implementa los endpoints (REST) que puede consumir la app Flutter.
-- **core/**: Centraliza configuración de temas y utilidades globales.
-- **modules/auth/**: Lógica, controladores, pantallas y providers para login y registro.
-- **modules/pantalla_principal/**: Lógica y presentación de rutinas, progreso y widgets reutilizables.
+
+---
+
+### Explicación de la estructura
+
+- **core/theme/**  
+  Configuración y personalización del tema visual de toda la app (colores, estilos globales, etc).
+
+- **modules/auth/**  
+  Todo lo relacionado con la autenticación y gestión de usuarios:
+  - **data/**: Modelos de usuario y repositorios concretos para consumir datos.
+  - **domain/**: Entidades del dominio, abstracciones de repositorios y casos de uso (lógica de negocio).
+  - **presentation/**: Controladores, páginas (UI) y providers para manejar el estado y la lógica de autenticación.
+
+- **modules/pantalla_principal/**  
+  Lógica principal del manejo de rutinas, progreso y ejercicios:
+  - **data/**: Modelos de rutina y repositorios de acceso a datos.
+  - **domain/**: Entidades de rutinas, ejercicios, abstracciones y casos de uso principales.
+  - **presentation/**: Controladores, páginas principales, providers de estado y widgets reutilizables (tarjetas de detalle, edición de ejercicios, etc).
+
+- **homePage.dart**  
+  Pantalla de inicio principal (entrypoint después del login).
+
+- **main.dart**  
+  Punto de entrada principal de la aplicación Flutter.
+
+---
+
+**Esta estructura sigue el patrón Clean Architecture, permitiendo separar claramente la lógica de negocio, la obtención de datos y la interfaz de usuario. Es escalable y fácil de mantener para agregar nuevos módulos o funcionalidades.**
 
 ---
 
