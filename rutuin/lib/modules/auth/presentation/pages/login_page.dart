@@ -56,25 +56,35 @@ class LoginPage extends StatelessWidget {
                     const SnackBar(content: Text('¡Login exitoso!')),
                   );
                   await controllerusuarioRutina.extraerrutina(context);
-                  print('Rutina extraída correctamente');
-                  String rutinaId =
-                      context
-                          .read<UserRutinProvider>()
-                          .usuario!
-                          .rutinasIds
-                          .first
-                          .rutina; // Asegúrate de que el usuario tenga rutinas asignadas
-                  RutinaModel? rutina = await controllerusuarioRutina
-                      .obtenerRutinaById(
-                        rutinaId,
-                      ); // Reemplaza 'rutinaId' con el ID real
-                  context.read<RutinaProvider>().setRutina(rutina!);
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(builder: (_) => HomeScreen()),
-                    (route) =>
-                        false, // 👈 Esto elimina todas las rutas anteriores
-                  );
+                  if (context.read<UserRutinProvider>().tieneRutina == true) {
+                    print('Rutina extraída correctamente');
+                    String rutinaId =
+                        context
+                            .read<UserRutinProvider>()
+                            .usuario!
+                            .rutinasIds
+                            .first
+                            .rutina; // Asegúrate de que el usuario tenga rutinas asignadas
+                    RutinaModel? rutina = await controllerusuarioRutina
+                        .obtenerRutinaById(
+                          rutinaId,
+                        ); // Reemplaza 'rutinaId' con el ID real
+                        context.read<RutinaProvider>().setRutina(rutina!);
+                  } else {
+                    print('No se encontró una rutina activa para el usuario');
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('No hay rutina activa')),
+                    );
+                    //return;
+                  }
+                  Navigator.push(context, 
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                  // Navigator.pushAndRemove(
+                  //   //context,
+                  //   MaterialPageRoute(builder: (_) => HomeScreen()),
+                  //   // (route) =>
+                  //   //     false, // 👈 Esto elimina todas las rutas anteriores
+                  // );
 
                   // Aquí podrías navegar a otra pantalla
                 } else {

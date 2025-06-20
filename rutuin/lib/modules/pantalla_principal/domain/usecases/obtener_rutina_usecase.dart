@@ -16,6 +16,7 @@ class ObtenerRutinaUseCase {
     return repository.getRutinaActual(id);
   }
   Future<RutinaModel?> obtenerRutinaById(String id) {
+    print("Obteniendo rutina por ID jajaj: $id");
     return repository.getRutinaById(id);
   }
   Future<RutinasUsuarioModel?> selecionarNuevaRutina(String idUsuario, List<RutinaInfo> listaRutinas) {

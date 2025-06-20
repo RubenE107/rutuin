@@ -21,11 +21,11 @@ class EntrenamientoScreen extends StatelessWidget {
         child: Text(msj, style: Theme.of(context).textTheme.headlineSmall),
       );
     } else {
-      final rutina = context.watch<UserRutinProvider>().tieneRutina;
+      final rutina = context.read<UserRutinProvider>().tieneRutina;
       if (rutina == true) {
         msj = '¡Listo para entrenar! 💪';
         List<DiaRutina> diaRutina =
-            context.watch<RutinaProvider>().usuario!.dias;
+            context.read<RutinaProvider>().usuario!.dias;
         WidgetsBinding.instance.addPostFrameCallback((_) {
           context.read<RutinaDiaProvider>().setRutinaDia(diaRutina);
         });

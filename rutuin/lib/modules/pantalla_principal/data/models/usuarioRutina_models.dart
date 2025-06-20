@@ -3,7 +3,7 @@ class RutinasUsuarioModel {
   final String usuarioId;
   final List<RutinaInfo> rutinasIds;
   final String fechaInicio;
-  final Progreso progreso;
+  final Progreso? progreso;
   final List<String> notasPersonales;
   final List<Modificacion> modificaciones;
   final String? dia1;
@@ -13,7 +13,7 @@ class RutinasUsuarioModel {
     required this.usuarioId,
     required this.rutinasIds,
     required this.fechaInicio,
-    required this.progreso,
+     this.progreso,
     required this.notasPersonales,
     required this.modificaciones,
     this.dia1,
@@ -52,7 +52,7 @@ class RutinasUsuarioModel {
     'usuario_id': usuarioId,
     'rutinas_ids': rutinasIds.map((e) => e.toJson()).toList(),
     'fecha_inicio': fechaInicio,
-    'progreso': progreso.toJson(),
+    'progreso': progreso?.toJson(),
     'notas_personales': notasPersonales,
     'modificaciones': modificaciones.map((e) => e.toJson()).toList(),
     'dia1': dia1,

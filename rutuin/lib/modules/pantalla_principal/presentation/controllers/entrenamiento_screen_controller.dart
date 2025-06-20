@@ -46,6 +46,7 @@ class EntrenamientoScreenController {
   }
 
   Future<RutinaModel?> obtenerRutinaById(String id) async {
+    print("Obteniendo rutina por ID: $id");
     return await _obtenerRutinaUseCase.obtenerRutinaById(id);
   }
 
@@ -54,58 +55,87 @@ class EntrenamientoScreenController {
     String idUsuario,
     String idRutina,
   ) async {
-    List<RutinaInfo> listaRutinas =
-        context.read<UserRutinProvider>().usuario!.rutinasIds;
+    if (context.read<RutinaProvider>().tieneRutina == true) {
+      final userRutinaProvider = context.read<UserRutinProvider>();
+      final rutinaProvider = context.read<RutinaProvider>();
+      print("No hay rutina actual, no se puede reemplazar.");
+      //si no har rutina se agrega uno vacio para evitar errores
+      List<RutinaInfo> listaRutinas = userRutinaProvider.usuario!.rutinasIds;
 
-    listaRutinas.add(
-      RutinaInfo(
-        rutina: idRutina,
-        estado: 'activo',
-        fechaInicio: DateTime.now().toIso8601String(),
-      ),
-    );
-    //primero desactivo la rutina actual
-    final rutinas = context.read<UserRutinProvider>().usuario!.rutinasIds;
+      // Desactivar actual
+      final index = listaRutinas.indexWhere((e) => e.estado == 'activo');
+      if (index != -1) {
+        final original = listaRutinas[index];
+        listaRutinas[index] = RutinaInfo(
+          rutina: original.rutina,
+          estado: 'inactivo',
+          fechaInicio: original.fechaInicio,
+        );
+      }
 
-    final index = rutinas.indexWhere((element) => element.estado == 'activo');
-    if (index != -1) {
-      final original = rutinas[index];
-      rutinas[index] = RutinaInfo(
-        rutina: original.rutina,
-        estado: 'inactivo',
-        fechaInicio: original.fechaInicio,
+      // Insertar nueva rutina
+      listaRutinas.insert(
+        0,
+        RutinaInfo(
+          rutina: idRutina,
+          estado: 'activo',
+          fechaInicio: DateTime.now().toIso8601String(),
+        ),
       );
-    }
 
-    //añado la nueva rutina al principio de la lista
-    Provider.of<UserRutinProvider>(
-      context,
-      listen: false,
-    ).usuario!.rutinasIds.insert(
-      0,
-      RutinaInfo(
-        rutina: idRutina,
-        estado: 'Activo',
-        fechaInicio: DateTime.now().toIso8601String(),
-      ),
-    );
+      print("Reemplazando rutina actual con la nueva rutina: $idRutina");
+      final rutina = await obtenerRutinaById(idRutina);
+      if (rutina != null) {
+        rutinaProvider.setRutina(rutina);
+        print("Rutina obtenida: ${rutina.nombre}");
+      }
 
-    //ahora reeplazo la rutina anterior con el nuevo desde la lista de rutinas
-    print("Reemplazando rutina actual con la nueva rutina: $idRutina");
-    final rutina=await obtenerRutinaById(idRutina);
-    print("Rutina obtenida: ${rutina?.nombre}");
-    context.read<RutinaProvider>().setRutina(rutina!);
-    print(context.read<RutinaProvider>().usuario!.nombre);
-    // context.read<UserRutinProvider>().usuario!.rutinasIds.add(RutinaInfo(
-    //     rutina: idRutina,
-    //     estado: 'nuevo',
-    //     fechaInicio: DateTime.now().toIso8601String()));
-    // for (var rutina in listaRutinas) {
-    //   print(
-    //     'Rutina: ${rutina.rutina}, Estado: ${rutina.estado}, Fecha Inicio: ${rutina.fechaInicio}',
-    //   );
-    // }
-    // return await _obtenerRutinaUseCase.selecionarNuevaRutina(
-    //     idUsuario, listaRutinas);
+      return userRutinaProvider.usuario;
+    } else {
+  final userRutinaProvider = context.read<UserRutinProvider>();
+  final rutinaProvider = context.read<RutinaProvider>();
+  print("No hay rutina actual, creando una nueva.");
+
+  // Creamos la lista de rutinas con solo la nueva activa
+  List<RutinaInfo> listaRutinas = [
+    RutinaInfo(
+      rutina: idRutina,
+      estado: 'activo',
+      fechaInicio: DateTime.now().toIso8601String(),
+    ),
+  ];
+
+  // Creamos el usuario con esa rutina activa
+  final nuevaRutinaUsuario = RutinasUsuarioModel(
+    id: idUsuario,
+    rutinasIds: listaRutinas,
+    usuarioId: '', // Si tienes un valor real, ponlo aquí
+    fechaInicio: DateTime.now().toIso8601String(),
+    progreso: null,
+    notasPersonales: [],
+    modificaciones: [],
+  );
+
+  userRutinaProvider.setUsuarioRutina(nuevaRutinaUsuario); // <- Actualiza el provider del usuario
+  print("Se creó la primera rutina para el usuario.");
+  print("id de rutina es: $idRutina");
+  final rutina =  await _obtenerRutinaUseCase.obtenerRutinaById(idRutina);
+  print(rutina?.nombre ?? "No se encontró rutina");
+
+  if (rutina != null) {
+    rutinaProvider.setRutina(rutina); // <- Actualiza el provider de la rutina seleccionada
+    print("Rutina guardada en RutinaProvider: ${rutina.nombre}");
   }
+
+  return userRutinaProvider.usuario; // <- Regresa el usuario actualizado
+}
+  }
+
+  // Future<void> guardarRutina(RutinaModel rutina) async {
+  //   await _guardarRutinaUseCase.guardarRutina(rutina);
+  // }
+
+  // Future<void> eliminarRutina(String id) async {
+  //   await _eliminarRutinaUseCase.eliminarRutina(id);
+  // }
 }

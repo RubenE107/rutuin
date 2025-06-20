@@ -64,7 +64,9 @@ class HomeRepositoryImpl implements IHomeRepository {
     final url = Uri.parse('$baseUrlRutina/$id');
     try {
       final response = await http.get(url);
+      print("Obteniendo rutina por ID: $id");
       if (response.statusCode == 200) {
+        print('✅ Rutina obtenida correctamente: ${response.body}');
         final Map<String, dynamic> data = jsonDecode(response.body);
         return RutinaModel.fromJson(data);
       } else {

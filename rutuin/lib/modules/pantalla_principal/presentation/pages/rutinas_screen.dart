@@ -4,6 +4,7 @@ import 'package:rutuin/modules/auth/presentation/providers/user_provider.dart';
 import 'package:rutuin/modules/pantalla_principal/data/models/rutina_models.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/controllers/entrenamiento_screen_controller.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/pages/editarRutina_screen.dart';
+import 'package:rutuin/modules/pantalla_principal/presentation/pages/home_screen.dart';
 import 'package:rutuin/modules/pantalla_principal/presentation/widgets/card_detalle_dias_rutina.dart';
 
 
@@ -48,6 +49,7 @@ class RutinasScreen extends StatelessWidget {
                         icon: const Icon(Icons.check_circle_outline),
                         label: const Text("Seleccionar"),
                         onPressed: () {
+                          
                           String idusuario = context.read<UserProvider>().usuario!.id;
                           String idrutina = rutina.id;
                           
@@ -62,6 +64,12 @@ class RutinasScreen extends StatelessWidget {
                               ),
                             ),
                           );
+                          Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => HomeScreen()),
+                    (route) =>
+                        false, 
+                  );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.green,
