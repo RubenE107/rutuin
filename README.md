@@ -7,76 +7,77 @@ Rutuin es una app fullstack modular para crear, gestionar y monitorear rutinas d
 
 ## 📁 Estructura del directorio `lib/`
 
+```plaintext
 lib/
-│
 ├── core/
-│ └── theme/
-│ ├── app_theme.dart
-│ └── config.dart
+│   └── theme/
+│       ├── app_theme.dart
+│       └── config.dart
 │
 ├── modules/
-│ ├── auth/
-│ │ ├── data/
-│ │ │ ├── models/
-│ │ │ │ └── usuario_models.dart
-│ │ │ └── repositories/
-│ │ │ └── auth_repository_impl.dart
-│ │ ├── domain/
-│ │ │ ├── entities/
-│ │ │ │ └── usuario.dart
-│ │ │ └── repositories/
-│ │ │ └── i_auth_repository.dart
-│ │ │ └── usecases/
-│ │ │ ├── login_usecase.dart
-│ │ │ └── register_usecase.dart
-│ │ └── presentation/
-│ │ ├── controllers/
-│ │ │ ├── login_controller.dart
-│ │ │ └── register_controller.dart
-│ │ ├── pages/
-│ │ │ ├── login_page.dart
-│ │ │ └── registrar_page.dart
-│ │ └── providers/
-│ │ ├── user_provider.dart
-│ │ └── auth_module.dart
-│ │
-│ └── pantalla_principal/
-│ ├── data/
-│ │ ├── models/
-│ │ │ ├── rutina_models.dart
-│ │ │ └── usuarioRutina_models.dart
-│ │ └── repositories/
-│ │ └── home_repository_impl.dart
-│ ├── domain/
-│ │ ├── entities/
-│ │ │ ├── ejercicio.dart
-│ │ │ ├── rutina.dart
-│ │ │ └── usuariorutinas.dart
-│ │ └── repositories/
-│ │ └── i_home_repository.dart
-│ │ └── usecases/
-│ │ └── obtener_rutina_usecase.dart
-│ └── presentation/
-│ ├── controllers/
-│ │ └── entrenamiento_screen_controller.dart
-│ ├── pages/
-│ │ ├── dieta_screen.dart
-│ │ ├── editarRutina_screen.dart
-│ │ ├── entrenamiento_screen.dart
-│ │ ├── home_screen.dart
-│ │ ├── progreso_screen.dart
-│ │ └── rutinas_screen.dart
-│ ├── providers/
-│ │ ├── ejercicio_provider.dart
-│ │ ├── rutina_provider.dart
-│ │ └── usuarioRutina_providers.dart
-│ └── widgets/
-│ ├── card_detalle_dias_rutina.dart
-│ ├── tarjeta_editable_ejercicio.dart
-│ └── tarjeta_ejercicios.dart
+│   ├── auth/
+│   │   ├── data/
+│   │   │   ├── models/
+│   │   │   │   └── usuario_models.dart
+│   │   │   └── repositories/
+│   │   │       └── auth_repository_impl.dart
+│   │   ├── domain/
+│   │   │   ├── entities/
+│   │   │   │   └── usuario.dart
+│   │   │   ├── repositories/
+│   │   │   │   └── i_auth_repository.dart
+│   │   │   └── usecases/
+│   │   │       ├── login_usecase.dart
+│   │   │       └── register_usecase.dart
+│   │   └── presentation/
+│   │       ├── controllers/
+│   │       │   ├── login_controller.dart
+│   │       │   └── register_controller.dart
+│   │       ├── pages/
+│   │       │   ├── login_page.dart
+│   │       │   └── registrar_page.dart
+│   │       └── providers/
+│   │           ├── user_provider.dart
+│   │           └── auth_module.dart
+│   │
+│   └── pantalla_principal/
+│       ├── data/
+│       │   ├── models/
+│       │   │   ├── rutina_models.dart
+│       │   │   └── usuarioRutina_models.dart
+│       │   └── repositories/
+│       │       └── home_repository_impl.dart
+│       ├── domain/
+│       │   ├── entities/
+│       │   │   ├── ejercicio.dart
+│       │   │   ├── rutina.dart
+│       │   │   └── usuariorutinas.dart
+│       │   ├── repositories/
+│       │   │   └── i_home_repository.dart
+│       │   └── usecases/
+│       │       └── obtener_rutina_usecase.dart
+│       └── presentation/
+│           ├── controllers/
+│           │   └── entrenamiento_screen_controller.dart
+│           ├── pages/
+│           │   ├── dieta_screen.dart
+│           │   ├── editarRutina_screen.dart
+│           │   ├── entrenamiento_screen.dart
+│           │   ├── home_screen.dart
+│           │   ├── progreso_screen.dart
+│           │   └── rutinas_screen.dart
+│           ├── providers/
+│           │   ├── ejercicio_provider.dart
+│           │   ├── rutina_provider.dart
+│           │   └── usuarioRutina_providers.dart
+│           └── widgets/
+│               ├── card_detalle_dias_rutina.dart
+│               ├── tarjeta_editable_ejercicio.dart
+│               └── tarjeta_ejercicios.dart
 │
 ├── homePage.dart
 └── main.dart
+
 
 
 ---
