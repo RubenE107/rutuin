@@ -24,8 +24,14 @@ class EntrenamientoScreen extends StatelessWidget {
       final rutina = context.read<UserRutinProvider>().tieneRutina;
       if (rutina == true) {
         msj = '¡Listo para entrenar! 💪';
-        List<DiaRutina> diaRutina =
-            context.read<RutinaProvider>().usuario!.dias;
+        final rutinaUsuario = context.read<RutinaProvider>().usuario;
+        if (rutinaUsuario == null) {
+          // Si aún no hay rutina cargada, muestra un loader o return
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        List<DiaRutina> diaRutina = rutinaUsuario.dias;
+
         WidgetsBinding.instance.addPostFrameCallback((_) {
           context.read<RutinaDiaProvider>().setRutinaDia(diaRutina);
         });
@@ -93,16 +99,14 @@ class EntrenamientoScreen extends StatelessWidget {
                           ),
                         )
                       else
-                        
-                          ...ejercicios
-                              .map(
-                                (ej) => TarjetaEjercicio(
-                                  ejercicio: ej,
-                                  recomendacion: tipo,
-                                ),
-                              )
-                              .toList(),
-                        
+                        ...ejercicios
+                            .map(
+                              (ej) => TarjetaEjercicio(
+                                ejercicio: ej,
+                                recomendacion: tipo,
+                              ),
+                            )
+                            .toList(),
                     ],
                   );
                 });

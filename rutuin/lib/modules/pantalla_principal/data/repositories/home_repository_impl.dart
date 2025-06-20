@@ -61,10 +61,13 @@ class HomeRepositoryImpl implements IHomeRepository {
   //obtener 1 rutina por id
   @override
   Future<RutinaModel?> getRutinaById(String id) async {
+    print("Obteniendo rutina por ID: $id");
     final url = Uri.parse('$baseUrlRutina/$id');
+    print("URL: $url");
     try {
-      final response = await http.get(url);
-      print("Obteniendo rutina por ID: $id");
+      print("Realizando solicitud a la URL: $url");
+      final response = await http.get(url).timeout(const Duration(seconds: 10));
+      print("Obteniendo rutina por ID despues de response: $id");
       if (response.statusCode == 200) {
         print('✅ Rutina obtenida correctamente: ${response.body}');
         final Map<String, dynamic> data = jsonDecode(response.body);
