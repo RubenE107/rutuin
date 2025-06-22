@@ -26,14 +26,15 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
-          // Center(
-          //   child: ElevatedButton(
-          //     child: Text("Entrar"),
-          //     onPressed: () {
-          //       Navigator.pushNamed(context, '/home');
-          //     },
-          //   ),
-          // ),
+          Center(
+            child: ElevatedButton.icon(
+              icon: Icon(Icons.settings_applications_outlined),
+              label: Text("Appi Coach"),
+              onPressed: () {
+                Navigator.pushNamed(context, '/appi');
+              },
+            ),
+          ),
         ],
       ),
     );

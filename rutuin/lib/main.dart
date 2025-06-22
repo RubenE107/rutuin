@@ -39,6 +39,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginPage(), // ya la tienes lista
         '/register': (context) =>RegisterPage(),
         '/home':(context)=>HomeScreen(),// Aquí puedes crear una página de registro // Aquí puedes crear una página para ver rutinas
+
+        '/appi': (context) => ConfigApiScreen(), // Aquí puedes crear una página para Appi Coach
       },
     );
   }
